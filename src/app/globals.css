@@ -12,3 +12,15 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bgContrast: #f9f9f9;
+}
+
+@layer theme {
+  .dark {
+    --color-bgContrast: #66C8B6;
+  }
+}
