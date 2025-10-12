@@ -42,12 +42,12 @@ export const Intro = () => {
                 animate={{ opacity: 1, y: 0 }}
 
             >
-                <span className="font-bold">Hello, I'm Pavithra Muthumanickam.</span>
+                <span className="font-bold">Hello, I&apos;m Pavithra Muthumanickam.</span>
                 <p>Senior Frontend Engineer | Lead Frontend Engineer | React | Next.js | TypeScript</p>
-                I'm a{" "}
+                I&apos;m a{" "}
                 <span className="font-bold">frontend developer</span> with{" "}
                 <span className="font-bold">8 years</span> of experience. I build high-performance, scalable web applications and lead teams to create clean, maintainable, and impactful user interfaces.
-                With 8+ years of experience in frontend architecture and enterprise development, I’m passionate about transforming ideas into engaging digital experiences.
+                With 8+ years of experience in frontend architecture and enterprise development, I&apos;m passionate about transforming ideas into engaging digital experiences.
             </motion.h1>
 
             <motion.div

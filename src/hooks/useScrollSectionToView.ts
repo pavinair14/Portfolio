@@ -8,14 +8,14 @@ export const useScrollSectionToView = (sectionName: string, threshold?: number) 
     const { ref, inView } = useInView({
         threshold: threshold ?? 0.75,
     });
-    console.log("inView", inView, sectionName);
+
     const { setActiveSection } = useActiveSection();
 
     useEffect(() => {
         if (inView) {
             setActiveSection(sectionName);
         }
-    }, [inView, ref])
+    }, [inView, ref, sectionName, setActiveSection]);
 
     return { ref }
 }
