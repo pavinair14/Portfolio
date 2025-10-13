@@ -3,7 +3,7 @@ export const skillsData = [
     { name: "React", icon: "/techIcons/react.png" },
     { name: "Redux", icon: "/techIcons/redux.png" },
     { name: "Zustand", icon: "/techIcons/zustand.webp" },
-    { name: "React Query", icon: "/techIcons/redux.png" },
+    { name: "React Query", icon: "/techIcons/react-query.webp" },
     { name: "TypeScript", icon: "/techIcons/ts.png" },
     { name: "JavaScript", icon: "/techIcons/js.png" },
     { name: "Tailwind CSS", icon: "/techIcons/tailwind.png" },
