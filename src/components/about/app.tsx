@@ -3,11 +3,12 @@
 import { useScrollSectionToView } from "@/hooks/useScrollSectionToView";
 import { SectionTitle } from "../common/sectionTitle";
 import { GrLocationPin } from "react-icons/gr";
+import Image from "next/image";
 
 export const About = () => {
     const { ref } = useScrollSectionToView("About");
     return (
-        <section ref={ref} id="about" className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28">
+        <section ref={ref} id="about" className="max-w-[80rem] text-xl text-center leading-8 scroll-mt-28">
             <SectionTitle>About me</SectionTitle>
             <p className="mb-3">
                 I am a <span className="font-medium">Frontend Engineer</span> with over <span className="italic">eight years of experience</span> developing and leading <span className="font-medium">large-scale web applications</span> using <span className="font-medium">React</span>, <span className="font-medium">TypeScript</span>, and <span className="font-medium">Next.js (Basics)</span>.
@@ -24,7 +25,10 @@ export const About = () => {
                 Whether I’m <span className="font-medium">developing user interfaces</span>, <span className="font-medium">mentoring teams</span>, or <span className="italic">exploring new design ideas</span>, I aim to deliver <span className="font-medium">digital experiences</span> that combine <span className="italic">performance</span>, <span className="italic">clarity</span>, and <span className="font-medium">visual harmony</span>.
             </p>
 
-            <p> <GrLocationPin /><span className="italic">Based in India</span> | <span className="font-medium">Open to senior and lead-level frontend roles across the UAE.</span></p>
+            <p className="flex justify-center items-center mt-8">
+                <Image src={"/images/pushpin.png"} alt={"pushpin"} width={25} height={25} />
+                <span><span className="italic px-2">Based in India</span> | <span className="px-2 font-medium"> Open to senior and lead-level frontend roles across the UAE.</span></span>
+            </p>
         </section>
     )
 }

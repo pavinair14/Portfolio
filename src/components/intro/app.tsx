@@ -7,11 +7,14 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+import { useActiveSection } from "@/context/activeSectionContext";
 
 export const Intro = () => {
     const { ref } = useScrollSectionToView("Home");
+    const { setActiveSection, setTimeOfLastClick } = useActiveSection();
+
     return (
-        <section id="home" ref={ref} className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+        <section id="home" ref={ref} className="mb-28 max-w-[80rem] text-center sm:mb-0 scroll-mt-[100rem]">
             <div className="flex items-center justify-center">
                 <div className="relative">
                     <motion.div
@@ -23,13 +26,13 @@ export const Intro = () => {
                         }}
                     >
                         <Image
-                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
-                            alt="Ricardo portrait"
-                            width="192"
-                            height="192"
+                            src={"/images/intro.jpg"}
+                            alt="Pavithra portrait"
+                            width="250"
+                            height="250"
                             quality="95"
                             priority={true}
-                            className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+                            className="h-48 w-48 rounded-full object-cover border-[0.25rem] border-white shadow-xl"
                         />
                     </motion.div>
 
@@ -37,21 +40,21 @@ export const Intro = () => {
             </div>
 
             <motion.h1
-                className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+                className="mb-10 mt-4 px-4 text-5xl font-medium !leading-[1.5] sm:text-5xl"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
 
             >
-                <span className="font-bold">Hello, I&apos;m Pavithra Muthumanickam.</span>
-                <p>Senior Frontend Engineer | Lead Frontend Engineer | React | Next.js | TypeScript</p>
-                I&apos;m a{" "}
-                <span className="font-bold">frontend developer</span> with{" "}
-                <span className="font-bold">8 years</span> of experience. I build high-performance, scalable web applications and lead teams to create clean, maintainable, and impactful user interfaces.
-                With 8+ years of experience in frontend architecture and enterprise development, I&apos;m passionate about transforming ideas into engaging digital experiences.
+                <span className="font-medium text-3xl">Hello, I&apos;m </span>
+                <p className="font-bold">Pavithra Muthumanickam</p>
+                <span className="font-medium text-2xl">A Creative </span>
+                <p className="font-bold italic bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-600">Lead Frontend Developer</p>
+                <p className="text-2xl mt-4">I build high-performance, scalable web applications and lead teams to create clean, maintainable, and impactful user interfaces.
+                    With 8+ years of experience in frontend architecture and enterprise development, I&apos;m passionate about transforming ideas into engaging digital experiences.</p>
             </motion.h1>
 
             <motion.div
-                className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+                className="flex flex-col sm:flex-row items-center justify-center gap-8 px-4 text-lg font-medium"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -60,10 +63,10 @@ export const Intro = () => {
             >
                 <Link
                     href="#contact"
-                    className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+                    className="group bg-transparent border-3 rounded-full border-teal-600 text-teal-600 dark:text-white px-7 py-2.5 flex items-center gap-2 outline-none hover:scale-110 transition"
                     onClick={() => {
-                        // setActiveSection("Contact");
-                        // setTimeOfLastClick(Date.now());
+                        setActiveSection("Contact");
+                        setTimeOfLastClick(Date.now());
                     }}
                 >
                     Contact me here{" "}
@@ -71,8 +74,8 @@ export const Intro = () => {
                 </Link>
 
                 <a
-                    className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-                    href="/CV.pdf"
+                    className="group bg-white px-7 py-3 bg-gradient-to-r text-white from-teal-500 to-blue-600 flex items-center gap-2 rounded-full outline-none hover:scale-110 transition cursor-pointer borderBlack"
+                    href={"/docs/resume.pdf"}
                     download
                 >
                     Download CV{" "}
@@ -80,16 +83,16 @@ export const Intro = () => {
                 </a>
 
                 <a
-                    className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-                    href="https://linkedin.com"
+                    className="bg-transparent border-3 rounded-full border-teal-600 p-4 text-gray-950 hover:scale-[1.15] flex items-center gap-2 hover:scale-[1.15] transition cursor-pointer dark:bg-transparent dark:text-white"
+                    href="https://www.linkedin.com/in/pavithra-leadfrontend/"
                     target="_blank"
                 >
                     <BsLinkedin />
                 </a>
 
                 <a
-                    className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-                    href="https://github.com"
+                    className="bg-transparent border-3 rounded-full border-teal-600 p-4 text-gray-950 hover:scale-[1.15] flex items-center gap-2 hover:scale-[1.15] transition cursor-pointer dark:bg-transparent dark:text-white"
+                    href="https://github.com/pavinair14"
                     target="_blank"
                 >
                     <FaGithubSquare />

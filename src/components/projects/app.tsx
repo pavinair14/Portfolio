@@ -10,8 +10,8 @@ export const Projects = () => {
     const { ref } = useScrollSectionToView("Projects", 0.5);
 
     return (
-        <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
-            <SectionTitle>My Projects</SectionTitle>
+        <section ref={ref} id="projects" className="scroll-mt-28">
+            <SectionTitle>Featured Projects</SectionTitle>
             <div>
                 {projectsData.map((project, index) => (
                     <Fragment key={index}>

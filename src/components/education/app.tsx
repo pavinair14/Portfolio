@@ -9,18 +9,18 @@ import "react-vertical-timeline-component/style.min.css";
 
 import { SectionTitle } from "../common/sectionTitle";
 import { useScrollSectionToView } from "@/hooks/useScrollSectionToView";
-import { experienceData } from "./constants";
+import { educationData } from "./constants";
 import { useTheme } from "@/context/themeSwitchContext";
 
-export const Experience = () => {
-    const { ref } = useScrollSectionToView("Experience", 0.5);
+export const Education = () => {
+    const { ref } = useScrollSectionToView("Education", 0.5);
     const { theme } = useTheme();
 
     return (
-        <section id="experience" ref={ref} className="scroll-mt-28 mb-28">
-            <SectionTitle>Work experience</SectionTitle>
+        <section id="education" ref={ref} className="scroll-mt-28 sm:mb-48">
+            <SectionTitle>Education</SectionTitle>
             <VerticalTimeline lineColor="">
-                {experienceData.map((item, index) => (
+                {educationData.map((item, index) => (
                     <React.Fragment key={index}>
                         <VerticalTimelineElement
                             contentStyle={{

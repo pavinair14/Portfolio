@@ -1,3 +1,6 @@
+import { i } from "framer-motion/client"
+import { Iceberg } from "next/font/google"
+
 export const skillsData = ["HTML",
     "CSS",
     "JavaScript",
@@ -17,3 +20,27 @@ export const skillsData = ["HTML",
     "Python",
     "Django",
     "Framer Motion",]
+
+export const otherSkillsData = [
+    { name: "Next.js", icon: "/techIcons/next.webp" },
+    { name: "React", icon: "/techIcons/react.png" },
+    { name: "Redux", icon: "/techIcons/redux.png" },
+    { name: "Zustand", icon: "/techIcons/zustand.webp" },
+    { name: "React Query", icon: "/techIcons/redux.png" },
+    { name: "TypeScript", icon: "/techIcons/ts.png" },
+    { name: "JavaScript", icon: "/techIcons/js.png" },
+    { name: "Tailwind CSS", icon: "/techIcons/tailwind.png" },
+    { name: "MUI", icon: "/techIcons/mui.svg" },
+    { name: "Jest", icon: "/techIcons/tailwind.png" },
+    { name: "Framer Motion", icon: "/techIcons/framer-motion.webp" },
+    { name: "Styled-Components", icon: "/techIcons/styled-components.webp" },
+    { name: "SASS", icon: "/techIcons/sass.webp" },
+    { name: "CSS", icon: "/techIcons/css.webp" },
+    { name: "HTML", icon: "/techIcons/html.webp" },
+    { name: "Git", icon: "/techIcons/git.png" },
+    { name: "GitHub", icon: "/techIcons/github.png" },
+    { name: "VSCODE", icon: "/techIcons/vscode.webp" },
+    { name: "Npm", icon: "/techIcons/npm.webp" },
+    { name: "Pnpm", icon: "/techIcons/pnpm.webp" },
+    { name: "Yarn", icon: "/techIcons/yarn.webp" },
+]

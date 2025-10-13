@@ -1,34 +1,36 @@
 "use client";
 
-import nyl from "@/assets/images/cerave.png";
-import laithwaites from "@/assets/images/laithwaites.png";
-import tract from "@/assets/images/tract.png";
-import cerave from "@/assets/images/cerave.png";
-
-export const projectsData = [{
-    title: "New York Life Insurance",
-    description:
-        "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: nyl,
-},
-{
-    title: "Tract",
-    description:
-        "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: tract,
-},
-{
-    title: "Laithwaites Wine",
-    description:
-        "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: laithwaites,
-}, {
-    title: "Loreal",
-    description:
-        "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: cerave,
-}];
+export const projectsData = [
+    {
+        title: "Developer Portfolio",
+        description:
+            "A modern, responsive portfolio built with Next.js, TypeScript, and Tailwind CSS, featuring smooth Framer Motion animations. It highlights my skills, projects, and services for dynamic content management and a seamless user experience.",
+        tags: ["NextJS", "ReactJS", "Context API", "Framer-Motion", "Tailwind", "Typescript"],
+        imageUrl: "/images/portfolio.png",
+    }, {
+        title: "New York Life Insurance",
+        description:
+            "Secure enterprise portal for insurance operations. Focused on optimizing performance, accessibility, and code scalability using React and Redux.",
+        tags: ["React", "Vue", "MUI", "JSP", "Jest", "Typescript", "React Query", "Context API", "micro-frontend", "Vite"],
+        imageUrl: "/images/nyl.png",
+    },
+    {
+        title: "Tract",
+        description:
+            "Enterprise analytics platform built with React and TypeScript for agricultural insights. Designed the frontend architecture and developed reusable UI components to accelerate new feature rollout.",
+        tags: ["React", "TypeScript", "D3.js", "Tailwind", "Zustand", "Jest", "rsbuild"],
+        imageUrl: "/images/tract.png",
+    },
+    {
+        title: "Laithwaites Wine",
+        description:
+            "Enhanced SEO, accessibility, and UI performance for an e-commerce site using React. Delivered smoother navigation and improved customer experience.",
+        tags: ["React", "MUI", "Jest", "Tailwind", "Framer", "JavaScript"],
+        imageUrl: "/images/laithwaites.png",
+    }, {
+        title: "L’Oréal",
+        description:
+            "Developed a responsive dashboard for L’Oréal’s marketing analytics, ensuring consistency and performance across global markets.",
+        tags: ["React", "MUI", "jQuery", "JavaScript", "SCSS"],
+        imageUrl: "/images/cerave.png",
+    }];

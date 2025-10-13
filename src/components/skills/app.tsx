@@ -2,8 +2,9 @@
 
 import { useScrollSectionToView } from "@/hooks/useScrollSectionToView";
 import { SectionTitle } from "../common/sectionTitle";
-import { skillsData } from "./constants";
+import { otherSkillsData, skillsData } from "./constants";
 import { motion } from "framer-motion";
+import Image from "next/image";
 const fadeInAnimationVariants = {
     initial: {
         opacity: 0,
@@ -23,23 +24,24 @@ export const Skills = () => {
     const { ref } = useScrollSectionToView("Skills");
 
     return (
-        <section id="skills" ref={ref} className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+        <section id="skills" ref={ref} className="max-w-[60rem] scroll-mt-28 text-center"
         >
             <SectionTitle>My skills</SectionTitle>
-            <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-                {skillsData.map((skill, index) => (
+            <ul className="flex flex-wrap justify-center gap-2 text-xl text-gray-800">
+                {otherSkillsData.map((skill, index) => (
                     <motion.li
-                        className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
+                        className="bg-white flex items-center borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
                         key={index}
                         variants={fadeInAnimationVariants}
                         initial="initial"
                         whileInView="animate"
                         viewport={{
-                            once: true,
+                            amount: 0.8,
                         }}
                         custom={index}
                     >
-                        {skill}
+                        <Image src={skill.icon} alt="tech-icons" width={50} height={50} />
+                        <span className="ml-2">{skill.name}</span>
                     </motion.li>
                 ))}
             </ul>

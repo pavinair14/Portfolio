@@ -9,13 +9,13 @@ export const useScrollSectionToView = (sectionName: string, threshold?: number) 
         threshold: threshold ?? 0.75,
     });
 
-    const { setActiveSection } = useActiveSection();
+    const { setActiveSection, timeOfLastClick } = useActiveSection();
 
     useEffect(() => {
-        if (inView) {
+        if (inView && Date.now() - timeOfLastClick > 1000) {
             setActiveSection(sectionName);
         }
-    }, [inView, ref, sectionName, setActiveSection]);
+    }, [inView, timeOfLastClick, sectionName, setActiveSection]);
 
     return { ref }
 }

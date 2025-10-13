@@ -24,3 +24,30 @@ html.dark {
     --color-bgContrast: #66C8B6;
   }
 }
+
+@layer utilities {
+  .gradient-border {
+    padding: 2px;
+    /* border thickness */
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    background: linear-gradient(to right, theme('colors.teal.500'), theme('colors.blue.600'));
+    display: inline-block;
+  }
+
+  .gradient-border>.content {
+    background-color: black;
+    /* inner bg */
+    border-radius: inherit;
+    padding: 0.75rem 1.75rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s;
+  }
+
+  .gradient-border:hover>.content {
+    transform: scale(1.05);
+  }
+}

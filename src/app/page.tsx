@@ -18,7 +18,6 @@ export default function Home() {
       <Skills />
       <Divider />
       <Experience />
-      <Divider />
       <Contact />
     </main>
   );
