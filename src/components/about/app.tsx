@@ -2,7 +2,6 @@
 
 import { useScrollSectionToView } from "@/hooks/useScrollSectionToView";
 import { SectionTitle } from "../common/sectionTitle";
-import { GrLocationPin } from "react-icons/gr";
 import Image from "next/image";
 
 export const About = () => {

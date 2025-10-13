@@ -2,7 +2,7 @@
 
 import { useScrollSectionToView } from "@/hooks/useScrollSectionToView";
 import { SectionTitle } from "../common/sectionTitle";
-import { otherSkillsData, skillsData } from "./constants";
+import { skillsData } from "./constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 const fadeInAnimationVariants = {
@@ -28,7 +28,7 @@ export const Skills = () => {
         >
             <SectionTitle>My skills</SectionTitle>
             <ul className="flex flex-wrap justify-center gap-2 text-xl text-gray-800">
-                {otherSkillsData.map((skill, index) => (
+                {skillsData.map((skill, index) => (
                     <motion.li
                         className="bg-white flex items-center borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
                         key={index}
