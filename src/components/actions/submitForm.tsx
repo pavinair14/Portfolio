@@ -3,7 +3,7 @@
 import { Resend } from "resend";
 import { getErrorMessage, validateString } from "./helpers";
 
-const resend = new Resend(process.env.RESEND_EMAIL_KEY);
+const resend = new Resend(process.env.RESEND_EMAIL_KEY!);
 
 export const sendEmail = async (formData: FormData) => {
     const senderEmail = formData.get("senderEmail");
