@@ -13,7 +13,7 @@ import { experienceData } from "./constants";
 import { useTheme } from "@/context/themeSwitchContext";
 
 export const Experience = () => {
-    const { ref } = useScrollSectionToView("Experience", 0.5);
+    const { ref } = useScrollSectionToView("Experience", 0.1);
     const { theme } = useTheme();
 
     return (

@@ -7,7 +7,7 @@ import Image from "next/image";
 export const About = () => {
     const { ref } = useScrollSectionToView("About");
     return (
-        <section ref={ref} id="about" className="max-w-[80rem] text-xl text-center leading-8 scroll-mt-28">
+        <section ref={ref} id="about" className="max-w-[80rem] text-xl px-4 text-center leading-8 scroll-mt-28 mb-28 sm:mb-0">
             <SectionTitle>About me</SectionTitle>
             <p className="mb-3">
                 I am a <span className="font-medium">Frontend Engineer</span> with over <span className="italic">eight years of experience</span> developing and leading <span className="font-medium">large-scale web applications</span> using <span className="font-medium">React</span>, <span className="font-medium">TypeScript</span>, and <span className="font-medium">Next.js (Basics)</span>.

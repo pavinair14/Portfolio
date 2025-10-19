@@ -5,6 +5,7 @@ import { SectionTitle } from "../common/sectionTitle";
 import { skillsData } from "./constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
+
 const fadeInAnimationVariants = {
     initial: {
         opacity: 0,
@@ -24,8 +25,7 @@ export const Skills = () => {
     const { ref } = useScrollSectionToView("Skills");
 
     return (
-        <section id="skills" ref={ref} className="max-w-[60rem] scroll-mt-28 text-center"
-        >
+        <section id="skills" ref={ref} className="max-w-[60rem] scroll-mt-28 text-center mb-28 sm:mb-0">
             <SectionTitle>My skills</SectionTitle>
             <ul className="flex flex-wrap justify-center gap-2 text-xl text-gray-800">
                 {skillsData.map((skill, index) => (
@@ -36,7 +36,7 @@ export const Skills = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{
-                            amount: 0.8,
+                            once: true
                         }}
                         custom={index}
                     >

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export const Divider = () => {
     return (
         <motion.div
-            className="bg-teal-600 my-36 h-16 w-1 rounded-full sm:block dark:bg-opacity-20"
+            className="bg-teal-600 my-36 h-16 w-1 rounded-full sm:block hidden dark:bg-opacity-20"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.125 }}

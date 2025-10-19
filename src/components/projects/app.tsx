@@ -7,10 +7,10 @@ import { ProjectDetails } from "./ProjectDetails"
 import { useScrollSectionToView } from "@/hooks/useScrollSectionToView"
 
 export const Projects = () => {
-    const { ref } = useScrollSectionToView("Projects", 0.5);
+    const { ref } = useScrollSectionToView("Projects", 0.2);
 
     return (
-        <section ref={ref} id="projects" className="scroll-mt-28">
+        <section ref={ref} id="projects" className="scroll-mt-28 mb-28 sm:mb-0">
             <SectionTitle>Featured Projects</SectionTitle>
             <div>
                 {projectsData.map((project, index) => (
