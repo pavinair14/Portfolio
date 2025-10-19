@@ -30,7 +30,7 @@ export const Intro = () => {
                             alt="Pavithra portrait"
                             width="250"
                             height="250"
-                            quality="95"
+                            quality="75"
                             priority={true}
                             className="h-48 w-48 rounded-full object-cover border-[0.25rem] border-white shadow-xl"
                         />
@@ -75,7 +75,7 @@ export const Intro = () => {
 
                 <Link
                     className="group bg-white px-7 py-3 bg-gradient-to-r text-white from-teal-500 to-blue-600 flex items-center gap-2 rounded-full outline-none hover:scale-110 transition cursor-pointer borderBlack"
-                    href={"/docs/resume.pdf"}
+                    href={"/docs/Pavithra_Muthumanickam_LeadFrontendEngineer_UAE.pdf"}
                     download
                 >
                     Download CV{" "}

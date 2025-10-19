@@ -33,7 +33,7 @@ export const Header = () => {
                                 }>{link.name}</Link>
                             {link.name === activeSection && (
                                 <motion.span
-                                    className="bg-teal-500 rounded-full hover:scale-110 absolute inset-0 -z-10 dark:bg-teal-500/20"
+                                    className="absolute bg-teal-500 rounded-full hover:scale-110 inset-0 -z-10 dark:bg-teal-500/20"
                                     layoutId="activeSection"
                                     transition={{
                                         type: "spring",

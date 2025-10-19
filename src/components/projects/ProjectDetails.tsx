@@ -51,7 +51,7 @@ export const ProjectDetails = ({ title,
                 {imageUrl && <Image
                     src={imageUrl}
                     alt="Project I worked on"
-                    quality={95}
+                    quality={75}
                     width={450}
                     height={450}
                     className="absolute hidden sm:block top-8 -right-10 w-[30rem] h-[20rem] rounded-t-lg shadow-2xl
