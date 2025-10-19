@@ -76,7 +76,7 @@ export const Intro = () => {
                 <Link
                     className="group bg-white px-7 py-3 bg-gradient-to-r text-white from-teal-500 to-blue-600 flex items-center gap-2 rounded-full outline-none hover:scale-110 transition cursor-pointer borderBlack"
                     href={"/docs/Pavithra_Muthumanickam_LeadFrontendEngineer_UAE.pdf"}
-                    download
+                    download="Pavithra_Muthumanickam_LeadFrontendEngineer_UAE"
                 >
                     Download CV{" "}
                     <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
