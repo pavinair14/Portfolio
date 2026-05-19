@@ -26,7 +26,7 @@ export const About = () => {
 
             <p className="flex justify-center items-center mt-8">
                 <Image src={"/images/pushpin.png"} alt={"pushpin"} width={25} height={25} />
-                <span><span className="italic px-2">Based in India</span> | <span className="px-2 font-medium"> Open to senior and lead-level frontend roles across the UAE.</span></span>
+                <span><span className="italic px-2">Based in India</span> | <span className="px-2 font-medium"> Open to senior and lead frontend roles worldwide — available for onsite opportunities and relocation.</span></span>
             </p>
         </section>
     )
